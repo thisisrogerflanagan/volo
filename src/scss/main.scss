@@ -816,6 +816,12 @@ body:has([data-page="faqs"]), body:has([data-page="privacy"]), body:has([data-pa
         padding: 0 0 2.5rem 0;
         max-width: 750px;
 
+        a {
+            color: #0AECFD;
+            text-decoration: underline;
+            &:hover { opacity: 0.8; }
+        }
+
         p {
             font-size: 1.05rem;
             line-height: 1.6;
