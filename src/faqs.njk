@@ -1,0 +1,95 @@
+---
+layout: layouts/base.njk
+title: FAQs
+---
+<div class="faq-page-container" data-page="faqs">
+    <nav class="faq-nav">
+        <div class="faq-nav-left">
+            <a href="{{ '/' | url }}" class="faq-nav-logo">
+                <img src="{{ '/assets/img/logo.png' | url }}" alt="Volo Icon">
+                <span class="faq-app-name">Volo</span>
+                <span class="faq-app-version">v1.0</span>
+            </a>
+        </div>
+        <div class="faq-nav-right">
+            <a href="{{ '/buy-now/' | url }}" class="btn-download-mac">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.1 2.48-1.34.03-1.77-.79-3.29-.79-1.53
+                        0-2.01.77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87
+                        3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42
+                        1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.36 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35
+                        1.05-3.11z"></path>
+                </svg>
+                Download for Mac
+            </a>
+        </div>
+    </nav>
+
+    <header class="faq-page-header">
+        <h1>FAQs</h1>
+        <p class="faq-updated">Updated August 2025</p>
+    </header>
+
+    <div class="faq-accordion-list">
+        <details>
+            <summary>
+                <h3>What should I do if I encounter a bug?</h3>
+                <span class="faq-toggle-icon"></span>
+            </summary>
+            <div class="faq-content">
+                <p>We’ve built Volo to be as reliable as possible, but if you do find a bug, please let us know. You can report any issues directly on our <a href="https://github.com/thisisrogerflanagan/volo-releases/issues/new?template=bug_report.yml" target="_blank">GitHub repository</a> or email us at support@voloapp.com.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h3>Why is the like button disabled?</h3>
+                <span class="faq-toggle-icon"></span>
+            </summary>
+            <div class="faq-content">
+                <p>The like button is currently a visual element to maintain the aesthetic of the board. We’re working on integrating it with music services in a future update to allow you to save your favorite tracks directly.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h3>Why is the waveform simulated?</h3>
+                <span class="faq-toggle-icon"></span>
+            </summary>
+            <div class="faq-content">
+                <p>Volo uses a beautifully crafted simulation to represent the "pulse" of your audio without requiring complex permissions. This ensures a private, performant experience that still feels alive and connected to your music.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>
+                <h3>How do I hide the menu bar icon?</h3>
+                <span class="faq-toggle-icon"></span>
+            </summary>
+            <div class="faq-content">
+                <p>You can toggle the visibility of the menu bar icon in the Volo Settings menu. Simply right-click the icon (if visible) or use the shortcut Command + Comma within the app to access preferences.</p>
+            </div>
+        </details>
+    </div>
+
+    <footer class="faq-help-footer">
+        <h2>Have more questions?</h2>
+        <p>If you have any additional questions, do not hesitate to <a href="mailto:support@voloapp.com" class="faq-contact-link">contact us</a>.</p>
+    </footer>
+</div>
+
+<script>
+    const details = document.querySelectorAll('.faq-accordion-list details');
+    details.forEach((targetDetail) => {
+        targetDetail.addEventListener('click', (e) => {
+            // Only trigger if we're opening, not closing
+            if (!targetDetail.hasAttribute('open')) {
+                details.forEach((detail) => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute('open');
+                    }
+                });
+            }
+        });
+    });
+</script>

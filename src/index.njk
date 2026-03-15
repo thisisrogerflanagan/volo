@@ -1,0 +1,237 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+
+<section class="hero">
+    <div class="hero-branding">
+        <img src="{{ '/assets/img/logo.png' | url }}" srcset="{{ '/assets/img/logo@2x.png' | url }} 2x" alt="Volo Icon" class="hero-logo">
+        <span class="hero-version">v1.0</span>
+    </div>
+    <h1>Bring a sense of
+        <span class="highlight">calm</span><br>
+        to your desk</h1>
+    <p class="sub-headline">The soothing pulse of mechanical split-flaps, reimagined for your Mac. 
+        Hand-crafted visuals designed to help you breathe, focus, and find your flow.</p>
+    <div class="cta-group">
+        <a href="{{ '/buy-now/' | url }}" class="btn-cta-primary">
+            <svg width="24" height="24" viewbox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.1 2.48-1.34.03-1.77-.79-3.29-.79-1.53
+                    0-2.01.77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87
+                    3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42
+                    1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.36 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35
+                    1.05-3.11z"></path>
+            </svg>
+            Get Volo for Mac
+            <span class="price-badge">$15</span>
+        </a>
+    </div>
+    <div class="video-container">
+        <video autoplay loop muted playsinline webkit-playsinline src="{{ '/assets/video/volo-loop.mov' | url }}">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    </section>
+
+    <section class="serenity-statement">
+      <h2>
+        <span class="reveal-text">Designed to be felt, not just seen.</span>
+        <span class="reveal-text">Volo creates a quiet moment of pause</span>
+        <span class="reveal-text">in your digital day, helping you</span>
+        <span class="reveal-text">reconnect with what matters—</span>
+        <span class="reveal-text">the steady, gentle rhythm of your time.</span>
+      </h2>
+    </section>
+
+    <section class="showcase-section">
+        <div class="showcase-container">
+            <div class="showcase-left">
+                <div class="board-frame">
+                    <div class="board-inner" id="showcase-board">
+                        <!-- 24 slots for the larger showcase board -->
+                        {% for i in range(0, 24) %}
+                            <div class="flip showcase-slot" data-value=" ">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-right">
+                <span class="label-caps">Versatility</span>
+                <h2>Everything you need, <br>at a glance.</h2>
+                <p>Volo isn't just a clock—it's a canvas for your digital life. Choose from a library of hand-crafted displays that keep you in sync with your world.</p>
+            </div>
+            
+            <div class="feature-selection-bar">
+                <button class="feature-opt active" data-feature="time">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span>Day & Time</span>
+                </button>
+                <button class="feature-opt" data-feature="music">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                    <span>Music</span>
+                </button>
+                <button class="feature-opt" data-feature="weather">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="M20 12h2"></path><path d="m19.07 19.07-1.41-1.41"></path><path d="M12 22v2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="M2 12h2"></path><path d="m7.76 7.76-1.41-1.41"></path><circle cx="12" cy="12" r="4"></circle></svg>
+                    <span>Weather</span>
+                </button>
+                <button class="feature-opt" data-feature="messaging">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <span>Messaging</span>
+                </button>
+                <button class="feature-opt" data-feature="quotes">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 2.5-1 4-3 5"></path><path d="M21 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 2.5-1 4-3 5"></path></svg>
+                    <span>Quotes</span>
+                </button>
+            </div>
+        </div>
+    </section>
+<section class="mission-section">
+    <h2>The heartbeat of your home office, designed to be present even when you’re not.</h2>
+    <p>Built for the ones who notice the beauty in every shift. Volo transforms your silent screen into a 
+        warm, living centerpiece that feels more like a piece of crafted furniture than simple software.</p>
+</section>
+<section class="customizer-section" data-theme="dark">
+    <h2>An atmosphere for every ritual.</h2>
+    <p>From the bright energy of a new morning to the quiet glow of a midnight ritual.</p>
+    <div class="preview-board">
+        <div
+            class="preview-row" id="customizer-date">
+            <!-- 12 chars -->
+            {% for i in range(0, 12) %}
+                <div class="flip customizer-slot" data-value=" ">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            {% endfor %}
+        </div>
+        <div
+            class="preview-row" id="customizer-time">
+            <!-- 12 chars -->
+            {% for i in range(0, 12) %}
+                <div class="flip customizer-slot" data-value=" ">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="controls-wrapper">
+        <div
+            class="color-swatches" id="lumeSwatches"><!-- Swatches injected via JS -->
+        </div>
+        <div class="control-pill">
+            <button class="btn-toggle" data-theme="light" title="Light Mode">
+                <svg
+                    width="20"
+                    height="20"
+                    viewbox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+            <button class="btn-toggle active" data-theme="dark" title="Dark Mode">
+                <svg
+                    width="20"
+                    height="20"
+                    viewbox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <button class="btn-toggle" data-theme="lume" title="Lume Mode">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="10" rx="2" ry="2"></rect>
+                    <line x1="12" y1="3" x2="12" y2="7"></line>
+                    <line x1="7" y1="4" x2="8" y2="7"></line>
+                    <line x1="17" y1="4" x2="16" y2="7"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+<section class="features-module">
+    <div class="feature-card screen-safer-card">
+        <h2>Screen safer.</h2>
+        <p>Smart algorithms prevent burn-in while beauty takes center stage.</p>
+        <div class="safer-graphic">
+            <div class="flip shift-tile static-tile" data-value="A">
+                <div>A</div>
+                <div>A</div>
+                <div>A</div>
+                <div>A</div>
+            </div>
+        </div>
+    </div>    <div class="feature-card card-large perfect-rhythm-card">
+        <h2>Find your perfect rhythm.</h2>
+        <p>Choose between Slow, Classic, and Fast flip speeds to find the pulse that fits your flow.</p>
+        <div class="motion-grid">
+            <div class="flip-tile">
+                <div class="flip" data-value="8" data-speed="slow">
+                    <div>8</div><div>8</div><div>8</div><div>8</div>
+                </div>
+                <label>Slow</label>
+            </div>
+            <div class="flip-tile">
+                <div class="flip" data-value="1" data-speed="classic">
+                    <div>1</div><div>1</div><div>1</div><div>1</div>
+                </div>
+                <label>Classic</label>
+            </div>
+            <div class="flip-tile">
+                <div class="flip" data-value="2" data-speed="fast">
+                    <div>2</div><div>2</div><div>2</div><div>2</div>
+                </div>
+                <label>Fast</label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="get-started-banner">
+    <div class="banner-container">
+        <div class="banner-text">
+            <h2>Install in peace.</h2>
+            <p>Apple-notarized for seamless, worry-free installation.</p>
+        </div>
+        <div class="banner-ctas">
+            <a href="{{ '/buy-now/' | url }}" class="btn-cta-primary">
+                <svg width="24" height="24" viewbox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.1 2.48-1.34.03-1.77-.79-3.29-.79-1.53
+                        0-2.01.77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87
+                        3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42
+                        1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.36 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35
+                        1.05-3.11z"></path>
+                </svg>
+                Get Volo for Mac
+                <span class="price-badge">$15</span>
+            </a>
+        </div>
+    </div>
+</section>
+<script src="{{ '/js/flip.js' | url }}"></script>
+<script src="{{ '/js/reveal.js' | url }}"></script>
